@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style.css">
+    <title>03 - First Three.js Project</title>
+    <style>
+        canvas{
+            display: block;
+        }
+        .video-container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            opacity: 0.5;
+            color: white;
+            border: 1px solid #00f;
+            background-color: red;
+            transform: translate(-50%, -50%);
+            width: 86vh;
+            height: 86vh;
+
+        }
+        .video-container video{
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <h1>Soon to be a Three.js website</h1> -->
+    <canvas class="webgl"></canvas>
+    <script type="module" src="./script.js"></script>
+    <div class="video-container" id="video-cont">
+        <video src="./src/out2.mp4"></video>
+    </div>
+</body>
+</html>
