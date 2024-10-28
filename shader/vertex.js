@@ -4,6 +4,10 @@ varying vec3 vPosition;
 varying vec2 vUv;
 uniform sampler2D t;
 varying vec4 ordColor;
+uniform float interpol;
+
+#define PI_2 6.28318
+
 vec3 mod289(vec3 x) {
   return x - floor(x * (1.0 / 289.0)) * 289.0;
 }
@@ -133,10 +137,12 @@ vec3 curlNoise( vec3 p ){
 
 void main() {
     vUv = uv;
-    float time = fract(0.5*uTime);
-    vec3 mPosition = position + 1200.0*time*(1.0-time)*curlNoise(0.025*(-sin((time*0.5+2.0)*3.14159265))*position);
+    float time = fract(interpol);
+    float k = time*pow(2.71828, time*(1.0-time));
+    float p = sin(fract(interpol*0.5)*PI_2);
+    vec3 mPosition = position + 500.0*p*curlNoise(position*k*0.01);
     vec4 mvPosition = modelViewMatrix * vec4(mPosition, 1.0);
-    gl_PointSize = 0.0;
+    gl_PointSize = 1.0;
     gl_Position = projectionMatrix * mvPosition;
 }`;
 

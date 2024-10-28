@@ -1,17 +1,16 @@
 {
   "name": "han-ext",
   "version": "1.0.0",
-  "description": "ThreeJS Test",
-  "main": "index.js",
+  "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "vite",
-    "build": "vite build"
+    "dev": "vite"
   },
-  "author": "Arun Kumar",
-  "license": "GPL-3.0",
+  "author": "Arun",
+  "license": "ISC",
+  "description": "",
   "dependencies": {
-    "three": "^0.169.0",
+    "three": "^0.148.0",
     "vite": "^5.4.10"
   }
 }
