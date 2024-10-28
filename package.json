@@ -6,9 +6,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite"
   },
-  "author": "Arun",
-  "license": "ISC",
-  "description": "",
+  "author": "Arun Kumar",
+  "license": "GPL-3.0",
+  "description": "Project based on ThreeJS",
   "dependencies": {
     "three": "^0.148.0",
     "vite": "^5.4.10"
